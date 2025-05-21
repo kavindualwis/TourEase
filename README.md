@@ -110,4 +110,4 @@ tourease/
 
 This project is licensed under the MIT License - see the LICENSE file for details.
 
-<p align="center">Developed with ❤️ as part of OOP Course Project</p>
+<p align="center">Developed by Kavindu Alwis</p>
