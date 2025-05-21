@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0">
+
+  <display-name>Tourism Package Customization Platform</display-name>
+
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>index.html</welcome-file>
+  </welcome-file-list>
+
+  <!-- Session Configuration -->
+  <session-config>
+    <session-timeout>30</session-timeout>
+  </session-config>
+
+  <!-- Error Pages -->
+  <error-page>
+    <error-code>404</error-code>
+    <location>/error404.jsp</location>
+  </error-page>
+
+  <error-page>
+    <error-code>500</error-code>
+    <location>/error500.jsp</location>
+  </error-page>
+
+  <!-- Servlet Mappings -->
+  <servlet>
+    <servlet-name>AdminPackageServlet</servlet-name>
+    <servlet-class>tourism.controller.AdminPackageServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AdminPackageServlet</servlet-name>
+    <url-pattern>/admin/package/add</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>CreateOrderServlet</servlet-name>
+    <servlet-class>tourism.servlet.CreateOrderServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CreateOrderServlet</servlet-name>
+    <url-pattern>/createOrder</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>UpdateProfileServlet</servlet-name>
+    <servlet-class>tourism.servlet.UpdateProfileServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UpdateProfileServlet</servlet-name>
+    <url-pattern>/updateProfile</url-pattern>
+  </servlet-mapping>
+  
+  <!-- Add direct access for specific pages -->
+  <servlet>
+    <servlet-name>ProfileJSP</servlet-name>
+    <jsp-file>/profile.jsp</jsp-file>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ProfileJSP</servlet-name>
+    <url-pattern>/profile</url-pattern>
+  </servlet-mapping>
+
+  <!-- Properly register the InquiryServlet -->
+  <servlet>
+    <servlet-name>InquiryServlet</servlet-name>
+    <servlet-class>tourism.servlet.InquiryServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>InquiryServlet</servlet-name>
+    <url-pattern>/submitInquiry</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+    <servlet-name>InquiryServlet</servlet-name>
+    <url-pattern>/deleteInquiry</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+    <servlet-name>InquiryServlet</servlet-name>
+    <url-pattern>/respondToInquiry</url-pattern>
+  </servlet-mapping>
+
+</web-app>

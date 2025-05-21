@@ -1,0 +1,381 @@
+:root {
+    --primary-color: #22A699;
+    --secondary-color: #F2BE22;
+    --accent-color: #F29727;
+    --danger-color: #F24C3D;
+    --text-dark: #2C3333;
+    --text-light: #F6F1F1;
+    --light-gray: #f8f9fa;
+    --medium-gray: #e9ecef;
+    --dark-gray: #495057;
+    --success-color: #28a745;
+    --warning-color: #ffc107;
+    --info-color: #17a2b8;
+    --border-radius: 10px;
+    --card-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f9fa;
+    color: var(--text-dark);
+    padding-top: 80px;
+    padding-bottom: 50px;
+    min-height: 100vh;
+    position: relative;
+    background-image: 
+        radial-gradient(circle at 20% 35%, rgba(58, 134, 255, 0.05) 0%, transparent 40%),
+        radial-gradient(circle at 75% 70%, rgba(106, 103, 206, 0.05) 0%, transparent 40%);
+}
+
+/* Navbar styles to match dashboard */
+.navbar {
+    background: linear-gradient(135deg, var(--primary-color), #1a7f76) !important;
+    padding: 0.75rem 1rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.navbar-brand {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.navbar-brand:hover {
+    transform: translateY(-2px);
+    text-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.nav-link {
+    font-weight: 500;
+    padding: 0.6rem 1rem;
+    border-radius: 5px;
+    margin: 0 0.25rem;
+    color: rgba(255, 255, 255, 0.9);
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+    background-color: rgba(255,255,255,0.1);
+    transform: translateY(-2px);
+    color: white;
+}
+
+.nav-link.active {
+    background-color: rgba(255,255,255,0.2);
+    font-weight: 600;
+    color: white;
+    position: relative;
+}
+
+.nav-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    border-radius: 3px;
+}
+
+.main-container {
+    max-width: 1140px;
+    margin: 2rem auto;
+    padding: 0 15px;
+}
+
+.page-header {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.page-header h1 {
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+    font-size: 2.5rem;
+}
+
+.page-header p {
+    color: var(--dark-gray);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.card {
+    border: none;
+    border-radius: var(--border-radius);
+    box-shadow: var(--card-shadow);
+    overflow: hidden;
+    margin-bottom: 30px;
+    background: white;
+}
+
+.trip-card {
+    height: 100%;
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+}
+
+.trip-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+.trip-image {
+    height: 200px;
+    object-fit: cover;
+}
+
+.trip-status {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-weight: 500;
+    font-size: 0.8rem;
+    z-index: 10;
+}
+
+.status-completed {
+    background-color: var(--success-color);
+    color: white;
+}
+
+.status-pending {
+    background-color: var(--warning-color);
+    color: white;
+}
+
+.status-cancelled {
+    background-color: var(--danger-color);
+    color: white;
+}
+
+.status-refunded {
+    background-color: var(--info-color);
+    color: white;
+}
+
+.trip-date {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    z-index: 10;
+}
+
+.trip-body {
+    padding: 20px;
+}
+
+.trip-title {
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.trip-detail {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.trip-detail i {
+    color: var(--primary-color);
+    margin-right: 10px;
+    width: 16px;
+    text-align: center;
+}
+
+.trip-footer {
+    padding: 15px 20px;
+    background-color: var(--light-gray);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.trip-price {
+    font-weight: 600;
+    color: var(--primary-color);
+    font-size: 1.1rem;
+}
+
+.btn-view-details {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 50px;
+    font-weight: 500;
+    font-size: 0.85rem;
+    transition: all 0.3s ease;
+}
+
+.btn-view-details:hover {
+    background-color: #1a857c;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    color: white;
+}
+
+.empty-trips {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.empty-trips i {
+    font-size: 4rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    opacity: 0.7;
+}
+
+.empty-trips h3 {
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: var(--text-dark);
+}
+
+.empty-trips p {
+    color: var(--dark-gray);
+    margin-bottom: 30px;
+}
+
+.btn-explore {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 50px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn-explore:hover {
+    background-color: #1a857c;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    color: white;
+}
+
+.filters-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--card-shadow);
+    margin-bottom: 30px;
+}
+
+.filter-label {
+    font-weight: 500;
+    margin-bottom: 5px;
+    display: block;
+    color: var(--text-dark);
+}
+
+.success-alert {
+    background: linear-gradient(135deg, var(--primary-color), #1a7f76);
+    color: white;
+    border: none;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Trip Details Modal */
+.modal-content {
+    border: none;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+.modal-header {
+    background: linear-gradient(135deg, var(--primary-color), #1a7f76);
+    border-bottom: none;
+    padding: 15px 20px;
+    color: white;
+}
+
+.modal-title {
+    font-weight: 600;
+}
+
+.modal-body {
+    padding: 25px;
+}
+
+.modal-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: var(--border-radius);
+    margin-bottom: 20px;
+}
+
+.modal-detail {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid var(--medium-gray);
+}
+
+.modal-detail:last-child {
+    border-bottom: none;
+}
+
+.modal-detail i {
+    color: var(--primary-color);
+    margin-right: 15px;
+    margin-top: 3px;
+    width: 16px;
+}
+
+.modal-detail-content {
+    flex: 1;
+}
+
+.modal-detail-label {
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.modal-detail-value {
+    color: var(--dark-gray);
+}
+
+.modal-order-id {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--dark-gray);
+    margin-top: -5px;
+}
+
+/* Add animation effects similar to dashboard */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-up {
+    animation: fadeUp 0.6s ease forwards;
+}

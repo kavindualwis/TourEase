@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context>
+    <!-- Configuration for the web application -->
+    <WatchedResource>WEB-INF/web.xml</WatchedResource>
+    
+    <!-- Allow JSP recompilation -->
+    <Parameter name="org.apache.jasper.compiler.Parser.STRICT_QUOTE_ESCAPING" value="false"/>
+    
+    <!-- Specify resource links if needed -->
+    <!-- <ResourceLink name="jdbc/TestDB" global="jdbc/TestDB" type="javax.sql.DataSource"/> -->
+</Context>

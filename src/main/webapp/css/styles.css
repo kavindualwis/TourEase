@@ -1,0 +1,116 @@
+/* Custom styles for Tourism Package Platform */
+
+/* Base styles */
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+.card {
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+    padding: 1.5rem;
+}
+
+/* Custom button styles */
+.btn-custom-primary {
+    background-color: #0d6efd;
+    color: white;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.btn-custom-primary:hover {
+    background-color: #0b5ed7;
+    color: white;
+}
+
+.form-control:focus {
+    border-color: #0d6efd;
+    box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25);
+}
+
+.bg-tourism {
+    background-color: #3498db;
+}
+
+.btn-tourism {
+    background-color: #2980b9;
+    border-color: #2980b9;
+    color: white;
+}
+
+.btn-tourism:hover {
+    background-color: #1c6399;
+    border-color: #1c6399;
+    color: white;
+}
+
+/* Hero section */
+.hero-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                url('../images/hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 100px 0;
+}
+
+/* Custom navbar styling */
+.navbar-tourism {
+    background-color: #3498db;
+}
+
+.navbar-tourism .navbar-brand,
+.navbar-tourism .nav-link {
+    color: white;
+}
+
+.navbar-tourism .nav-link:hover {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Footer styling */
+footer {
+    background-color: #343a40;
+    color: rgba(255, 255, 255, 0.8);
+    padding: 40px 0 20px;
+}
+
+footer a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+/* Custom form styling */
+.form-label {
+    font-weight: 500;
+}
+
+/* Error and success messages */
+.alert {
+    border-radius: 5px;
+}
+
+/* Custom breakpoints */
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 60px 0;
+    }
+}
