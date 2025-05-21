@@ -9,7 +9,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class FileHandler {
-    private final String USER_FILE_PATH = "C:/temp/txt-project/users.txt";
+
+    // Add Your location
+    private final String USER_FILE_PATH = "___";
 
     // Adds a new user to the TXT file if the username doesn't already exist
     public synchronized boolean saveUser(User user) {

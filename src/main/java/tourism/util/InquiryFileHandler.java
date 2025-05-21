@@ -10,7 +10,9 @@ import java.util.List;
 import java.util.UUID;
 
 public class InquiryFileHandler {
-    private final String INQUIRY_FILE_PATH = "C:/temp/txt-project/inquiries.txt";
+
+    // Add Your location
+    private final String INQUIRY_FILE_PATH = "___";
 
     // Get all inquiries from the TXT file
     public List<Inquiry> getAllInquiries() {

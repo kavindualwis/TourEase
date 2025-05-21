@@ -8,7 +8,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class BookingFileHandler {
-    private final String BOOKING_FILE_PATH = "C:/temp/txt-project/bookings.txt";
+
+    // Add Your location
+    private final String BOOKING_FILE_PATH = "___";
 
     // Save a new booking to the TXT file
     public synchronized boolean saveBooking(Booking booking) {
